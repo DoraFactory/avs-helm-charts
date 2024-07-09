@@ -17,10 +17,6 @@ service:
       port: 9091
       protocol: TCP
       targetPort: 9091
-ingress:
-  annotations: {}
-  enabled: false
-  host: example.com
 
 configs:
   operator.yaml: |
@@ -53,6 +49,7 @@ configs:
     register_operator_on_startup: true
 
 register:
+  enabled: true
   image:
     repository: gcr.io/openoracle-de73b/operator
     pullPolicy: Always

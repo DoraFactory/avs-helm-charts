@@ -1,3 +1,9 @@
+ingress:
+  annotations: {}
+  enabled: false
+  host: example.com
+  ingressClassName: "nginx"
+
 node:
   volumeMounts:
     - name: bls-key

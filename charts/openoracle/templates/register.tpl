@@ -1,3 +1,4 @@
+{{- if .Values.register.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -31,3 +32,4 @@ spec:
           configMap:
             name: {{ include "openoracle.fullname" . }}-config
   backoffLimit: 2
+{{- end }}
