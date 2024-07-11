@@ -162,6 +162,9 @@
                     },
                     "type": "array"
                 },
+                "enabled": {
+                    "type": "boolean"
+                },
                 "image": {
                     "properties": {
                         "pullPolicy": {
@@ -175,9 +178,6 @@
                         }
                     },
                     "type": "object"
-                },
-                "enabled": {
-                    "type": "boolean"
                 }
             },
             "type": "object"

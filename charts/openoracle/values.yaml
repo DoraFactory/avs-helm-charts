@@ -18,6 +18,12 @@ service:
       protocol: TCP
       targetPort: 9091
 
+ingress:
+  annotations: {}
+  enabled: false
+  host: example.com
+  ingressClassName: "nginx"
+
 configs:
   operator.yaml: |
 
