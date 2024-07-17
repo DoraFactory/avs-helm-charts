@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ include "openoracle.fullname" . }}
+  name: {{ .Values.serviceAccount.name | default (include "openoracle.fullname" .) }}
   labels:
     {{- include "openoracle.labels" . | nindent 4 }}
     {{- with .Values.labels }}

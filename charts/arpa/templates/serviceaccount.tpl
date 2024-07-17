@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ include "arpa.fullname" . }}
+  name: {{ .Values.serviceAccount.name | default (include "arpa.fullname" .) }}
   labels:
     {{- include "arpa.labels" . | nindent 4 }}
     {{- with .Values.labels }}

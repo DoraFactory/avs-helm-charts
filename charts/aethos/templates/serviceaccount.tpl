@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ include "aethos.fullname" . }}
+  name: {{ .Values.serviceAccount.name | default (include "aethos.fullname" .) }}
   labels:
     {{- include "aethos.labels" . | nindent 4 }}
     {{- with .Values.labels }}

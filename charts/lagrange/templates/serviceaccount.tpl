@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ include "lagrange.fullname" . }}
+  name: {{ .Values.serviceAccount.name | default (include "lagrange.fullname" .) }}
   labels:
     {{- include "lagrange.labels" . | nindent 4 }}
     {{- with .Values.labels }}
