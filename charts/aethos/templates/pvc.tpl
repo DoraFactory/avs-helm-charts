@@ -12,7 +12,7 @@ metadata:
     {{- toYaml . | nindent 4 }}
     {{- end}}
 spec:
-  storageClassName: oci-bv
+  storageClassName: {{ .Values.pvc.storageClassName }}
   accessModes:
     - ReadWriteOnce
   resources:
